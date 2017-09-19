@@ -435,13 +435,14 @@ var band = true;
 var llave =n2-n1;
 var num;
 var cadena="";
-//var c=0; //contador
-//var palabraencryp = document.getElementById('salidita').value;//Toma la palabra a cifrar
+var palabraencryp = document.getElementById('salidita').value;//Toma la palabra a cifrar
+var arreglito=palabraencryp.split(",");
 
 
 
-for (var i = 0; i< arregloNo.length; i++) { 
-	var caracter = arregloNo[i];
+for (var i = 0; i< arreglito.length; i++) { 
+	var caracter = arreglito[i];
+
 	num=caracter-llave;
 	
 	if (num == 11){
