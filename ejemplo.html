@@ -7,7 +7,12 @@
 function iniciar(){
 var boton=document.getElementById('cifrar');//decía obtener
 boton.addEventListener('click', obtener, false);
+var boton2=document.getElementById('descifrar');//decía obtener
+boton2.addEventListener('click', obtener2, false);
+
 }
+ 
+var arregloNo = [];
  
 function ubicarme(posicion){
 
@@ -20,9 +25,10 @@ longitud=posicion.coords.longitude;
 var n1 = parseInt(latitud);//redondea las coordenadas
 var n2 = parseInt(longitud)*-1;//redondea las coordenadas
 var st="";
+var llave = n2-n1;
 var lc;
 //alert(n1+" "+n2);
-var arregloNo = [];
+
 var c=0;
 var palabraencryp = document.getElementById('entrada').value;//Toma la palabra a cifrar
 
@@ -30,7 +36,7 @@ var palabraencryp = document.getElementById('entrada').value;//Toma la palabra a
 for (var i = 0; i< palabraencryp.length; i++) {
          var caracter = palabraencryp.charAt(i);//Hasta aquí se recorre la cadena
 		if (caracter =="A"|| caracter =="a"){
-			lc = 11+n1;
+			lc = 11+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -45,7 +51,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="B"|| caracter =="b"){
-			lc = 25+n2;
+			lc = 25+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -59,7 +65,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="C"|| caracter =="c"){
-			lc = 23+n1;
+			lc = 23+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -73,7 +79,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="D"|| caracter =="d"){
-			lc = 13+n2;
+			lc = 13+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -87,7 +93,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="E"|| caracter =="e"){
-			lc = 3+n1;
+			lc = 3+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -101,7 +107,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="F"|| caracter =="f"){
-			lc = 14+n2;
+			lc = 14+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -115,7 +121,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="G"|| caracter =="g"){
-			lc = 15+n1;
+			lc = 15+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -129,7 +135,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="H"|| caracter =="h"){
-			lc = 16+n2;
+			lc = 16+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -143,7 +149,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="I"|| caracter =="i"){
-			lc = 8+n1;
+			lc = 8+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -157,7 +163,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="J"|| caracter =="j"){
-			lc = 17+n2;
+			lc = 17+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -171,7 +177,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="K"|| caracter =="k"){
-			lc = 18+n1;
+			lc = 18+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -185,7 +191,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="L"|| caracter =="l"){
-			lc = 19+n2;
+			lc = 19+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -199,7 +205,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="M"|| caracter =="m"){
-			lc = 27+n1;
+			lc = 27+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -213,7 +219,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="N"|| caracter =="n"){
-			lc = 26+n2;
+			lc = 26+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -227,7 +233,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="Ñ"|| caracter =="ñ"){
-			lc = 20+n1;
+			lc = 20+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -241,7 +247,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="O"|| caracter =="o"){
-			lc = 9+n2;
+			lc = 9+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -255,7 +261,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="P"|| caracter =="p"){
-			lc = 10+n1;
+			lc = 10+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -269,7 +275,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="Q"|| caracter =="q"){
-			lc = 1+n2;
+			lc = 1+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -283,7 +289,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="R"|| caracter =="r"){
-			lc = 4+n1;
+			lc = 4+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -297,7 +303,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="S"|| caracter =="s"){
-			lc = 12+n2;
+			lc = 12+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -311,7 +317,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="T"|| caracter =="t"){
-			lc = 5+n1;
+			lc = 5+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -325,7 +331,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="U"|| caracter =="u"){
-			lc = 7+n2;
+			lc = 7+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -339,7 +345,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="V"|| caracter =="v"){
-			lc = 24+n1;
+			lc = 24+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -353,7 +359,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="W"|| caracter =="w"){
-			lc = 2+n2;
+			lc = 2+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -367,7 +373,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="X"|| caracter =="x"){
-			lc = 22+n1;
+			lc = 22+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -381,7 +387,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="Y"|| caracter =="y"){
-			lc = 6+n2;
+			lc = 6+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -395,7 +401,7 @@ for (var i = 0; i< palabraencryp.length; i++) {
 			}
 		}
 		if (caracter =="Z"|| caracter =="z"){
-			lc = 21+n1;
+			lc = 21+llave;
 			if(lc<100){
 				st= lc.toString();
 				st= "00"+st;
@@ -418,33 +424,121 @@ document.getElementById('salidita').value =arregloNo;
 }
  
 
-function desencriptar(){
-//var latitud;
-//var longitud;
-//latitud=posicion.coords.latitude;
-//longitud=posicion.coords.longitude;
-//var n1 = parseInt(latitud);//redondea las coordenadas
-//var n2 = parseInt(longitud)*-1;//redondea las coordenadas
-//var st="";
-//var lc;
-//var arregloNo = [];
+function desencriptar(posicion){
+var latitud;
+var longitud;
+latitud=posicion.coords.latitude;
+longitud=posicion.coords.longitude;
+var n1 = parseInt(latitud);//redondea las coordenadas
+var n2 = parseInt(longitud)*-1;//redondea las coordenadas
+var band = true;
+var llave =n2-n1;
+var num;
+var cadena="";
 //var c=0; //contador
 //var palabraencryp = document.getElementById('salidita').value;//Toma la palabra a cifrar
 
-//alert(arregloNo);
-alert("entro");
-//for (var i = 0; i< palabraencryp.length; i++) { 
-	//var caracter = palabraencryp.charAt(i);
-	 //palabraencryp.forEach(function (elemento, indice, array) {
-     //console.log(elemento, indice);
- //}
+
+
+for (var i = 0; i< arregloNo.length; i++) { 
+	var caracter = arregloNo[i];
+	num=caracter-llave;
+	
+	if (num == 11){
+	cadena= cadena+"a";
+	}
+	if (num == 25){
+	cadena= cadena+"b";
+	}
+	if (num == 23){
+	cadena= cadena+"c";
+	}
+	if (num == 13){
+	cadena= cadena+"d";
+	}
+	if (num == 3){
+	cadena= cadena+"e";
+	}
+	if (num == 14){
+	cadena= cadena+"f";
+	}
+	if (num == 15){
+	cadena= cadena+"g";
+	}
+	if (num == 16){
+	cadena= cadena+"h";
+	}
+	if (num == 8){
+	cadena= cadena+"i";
+	}
+	if (num == 17){
+	cadena= cadena+"j";
+	}
+	if (num == 18){
+	cadena= cadena+"k";
+	}
+	if (num == 19){
+	cadena= cadena+"l";
+	}
+	if (num == 27){
+	cadena= cadena+"m";
+	}
+	if (num == 26){
+	cadena= cadena+"n";
+	}
+	if (num == 20){
+	cadena= cadena+"ñ";
+	}
+	if (num == 9){
+	cadena= cadena+"o";
+	}
+	if (num == 10){
+	cadena= cadena+"p";
+	}
+	if (num == 1){
+	cadena= cadena+"q";
+	}
+	if (num == 4){
+	cadena= cadena+"r";
+	}
+	if (num == 12){
+	cadena= cadena+"s";
+	}
+	if (num == 5){
+	cadena= cadena+"t";
+	}
+	if (num == 7){
+	cadena= cadena+"u";
+	}
+	if (num == 24){
+	cadena= cadena+"v";
+	}
+	if (num == 2){
+	cadena= cadena+"w";
+	}
+	if (num == 22){
+	cadena= cadena+"x";
+	}
+	if (num == 6){
+	cadena= cadena+"y";
+	}
+	if (num == 21){
+	cadena= cadena+"z";
+	}
+	
+ 
+	}
+ document.getElementById('salidadesencry').value =cadena;
  
  }
+ 
 
  
  
  
  function obtener(){navigator.geolocation.getCurrentPosition(ubicarme, gestionarErrores);}//donde dice ubicarme decía mostrar
+ 
+ function obtener2(){navigator.geolocation.getCurrentPosition(desencriptar, gestionarErrores);}
  
 function mostrar(posicion){
 var ubicacion=document.getElementById('localizacion');
@@ -461,7 +555,7 @@ var datos='';
 //document.getElementById('longi').value = longitud;
 }
  
-//Adjunta tu archivo a encriptar <input type="file" name="documento"/>
+
  
 function gestionarErrores(error){
 alert('Error: '+error.code+' '+error.message+ '\n\nPor favor compruebe que está conectado '+
