@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head><meta charset="utf-8"><title>Encryptacion</title>
+<script type="text/javascript">
+
+
+function iniciar(){
+var boton=document.getElementById('cifrar');//decía obtener
+boton.addEventListener('click', obtener, false);
+}
+ 
+function ubicarme(posicion){
+
+//var n1 = document.getElementById('lati').value;//toma la coordenada del cuadro de texto
+//var n2 = document.getElementById('longi').value;//toma la coordenada de cuadro de texto
+var latitud;
+var longitud;
+latitud=posicion.coords.latitude;
+longitud=posicion.coords.longitude;
+var n1 = parseInt(latitud);//redondea las coordenadas
+var n2 = parseInt(longitud)*-1;//redondea las coordenadas
+var st="";
+var lc;
+//alert(n1+" "+n2);
+var arregloNo = [];
+var c=0;
+var palabraencryp = document.getElementById('entrada').value;//Toma la palabra a cifrar
+
+
+for (var i = 0; i< palabraencryp.length; i++) {
+         var caracter = palabraencryp.charAt(i);//Hasta aquí se recorre la cadena
+		if (caracter =="A"|| caracter =="a"){
+			lc = 11+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+			else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="B"|| caracter =="b"){
+			lc = 25+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="C"|| caracter =="c"){
+			lc = 23+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="D"|| caracter =="d"){
+			lc = 13+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="E"|| caracter =="e"){
+			lc = 3+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="F"|| caracter =="f"){
+			lc = 14+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="G"|| caracter =="g"){
+			lc = 15+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="H"|| caracter =="h"){
+			lc = 16+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="I"|| caracter =="i"){
+			lc = 8+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="J"|| caracter =="j"){
+			lc = 17+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="K"|| caracter =="k"){
+			lc = 18+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="L"|| caracter =="l"){
+			lc = 19+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="M"|| caracter =="m"){
+			lc = 27+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="N"|| caracter =="n"){
+			lc = 26+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="Ñ"|| caracter =="ñ"){
+			lc = 20+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="O"|| caracter =="o"){
+			lc = 9+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="P"|| caracter =="p"){
+			lc = 10+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="Q"|| caracter =="q"){
+			lc = 1+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="R"|| caracter =="r"){
+			lc = 4+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="S"|| caracter =="s"){
+			lc = 12+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="T"|| caracter =="t"){
+			lc = 5+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="U"|| caracter =="u"){
+			lc = 7+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="V"|| caracter =="v"){
+			lc = 24+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="W"|| caracter =="w"){
+			lc = 2+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="X"|| caracter =="x"){
+			lc = 22+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="Y"|| caracter =="y"){
+			lc = 6+n2;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		if (caracter =="Z"|| caracter =="z"){
+			lc = 21+n1;
+			if(lc<100){
+				st= lc.toString();
+				st= "00"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}else{
+			st= lc.toString();
+			st= "0"+st;
+				arregloNo[c]=st;
+				c = c+1;
+			}
+		}
+		
+		
+}
+document.getElementById('salidita').value =arregloNo;
+
+
+
+}
+ 
+
+function desencriptar(){
+//var latitud;
+//var longitud;
+//latitud=posicion.coords.latitude;
+//longitud=posicion.coords.longitude;
+//var n1 = parseInt(latitud);//redondea las coordenadas
+//var n2 = parseInt(longitud)*-1;//redondea las coordenadas
+//var st="";
+//var lc;
+//var arregloNo = [];
+//var c=0; //contador
+//var palabraencryp = document.getElementById('salidita').value;//Toma la palabra a cifrar
+
+//alert(arregloNo);
+alert("entro");
+//for (var i = 0; i< palabraencryp.length; i++) { 
+	//var caracter = palabraencryp.charAt(i);
+	 //palabraencryp.forEach(function (elemento, indice, array) {
+     //console.log(elemento, indice);
+ //}
+ 
+ }
+
+ 
+ 
+ 
+ function obtener(){navigator.geolocation.getCurrentPosition(ubicarme, gestionarErrores);}//donde dice ubicarme decía mostrar
+ 
+function mostrar(posicion){
+var ubicacion=document.getElementById('localizacion');
+var datos='';
+//var latitud;
+//var longitud;
+//datos+='Latitud: '+posicion.coords.latitude+'<br>';
+//datos+='Longitud: '+posicion.coords.longitude+'<br>';
+//datos+='Exactitud: '+posicion.coords.accuracy+' metros.<br>';
+//ubicacion.innerHTML=datos;
+//latitud=posicion.coords.latitude;
+//longitud=posicion.coords.longitude;
+//document.getElementById('lati').value = latitud;
+//document.getElementById('longi').value = longitud;
+}
+ 
+//Adjunta tu archivo a encriptar <input type="file" name="documento"/>
+ 
+function gestionarErrores(error){
+alert('Error: '+error.code+' '+error.message+ '\n\nPor favor compruebe que está conectado '+
+'a internet y habilite la opción permitir compartir ubicación física');
+}
+ 
+window.addEventListener('load', iniciar, false);
+ 
+</script>
+</head>
+<body>
+<div id="localizacion">
+<p></p>
+<p></p>
+Escribe la palabra para encriptar <input type="text" id="entrada" name="entrada"/>
+<button id="cifrar" onclick="ubicarme()">Encryptar</button>
+<p></p>
+<p></p>
+La palabra encryptada es:
+<p></p>
+<p></p>
+ <textarea name="mensaje" id="salidita" cols="60" rows="6" /> </textarea>
+<p></p>
+<p></p>
+La palabra desencryptada es <input type="text" id="salidadesencry" name="salidadesencry"/>
+<button id="descifrar" onclick="desencriptar()">Desencryptar</button>
+</div>
+</body>
+</html>
